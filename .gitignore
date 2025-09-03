@@ -1,0 +1,35 @@
+
+
+# Frontend (Next.js) - all patterns scoped to Frontend/
+Frontend/node_modules/
+Frontend/.pnp
+Frontend/.pnp.*
+Frontend/.yarn/*
+Frontend/!.yarn/patches
+Frontend/!.yarn/plugins
+Frontend/!.yarn/releases
+Frontend/!.yarn/versions
+
+Frontend/.next/
+Frontend/out/
+Frontend/.vercel/
+Frontend/next-env.d.ts
+Frontend/dist/
+Frontend/build/
+Frontend/coverage/
+Frontend/npm-debug.log*
+Frontend/yarn-debug.log*
+Frontend/yarn-error.log*
+Frontend/.pnpm-debug.log*
+Frontend/.env*
+Frontend/*.log
+
+# Backend (Python) - all patterns scoped to backend/
+backend/env/
+backend/__pycache__/
+backend/*.pyc
+backend/.env*
+backend/*.log
+
+
+
