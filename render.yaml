@@ -6,10 +6,11 @@ services:
     branch: main
     root: backend
     buildCommand: pip install -r requirements.txt
-    startCommand: uvicorn app.main:app --host 0.0.0.0 --port $PORT
+  startCommand: gunicorn -k uvicorn.workers.UvicornWorker -w 4 app.main:app --bind 0.0.0.0:$PORT
     envVars:
       - key: SUPABASE_URL
       - key: SUPABASE_KEY
       - key: HF_API_KEY
       - key: HF_MODEL
-    healthCheckPath: /healthw
+      - key: ALLOWED_ORIGINS
+    healthCheckPath: /health
